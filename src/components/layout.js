@@ -24,24 +24,31 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+      <div style={{
+        background: `#f8f8f8`,
+      }}>
+        <Header siteTitle={data.site.siteMetadata.title}/>
         <div
           style={{
-            margin: `0 auto`,
+            margin: `0px auto`,
             maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
+            padding: `15px 1.0875rem 1.45rem`,
+            paddingTop: 56,
+            background: `#ffffff`,
+            borderRadius: `4px`,
+            border: `1px solid #d1d5da`,
+            minHeight:`768px`
           }}
         >
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
         </div>
-      </>
+        <footer className={"text-center"} style={{
+          padding: `15px 0px 15px 0px`,
+          color: `#eee`,
+        }}>
+          Copyright © Forever Young
+        </footer>
+      </div>
     )}
   />
 )
