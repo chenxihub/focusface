@@ -1,16 +1,9 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+import "./bootstrap.css"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -37,7 +30,7 @@ const Layout = ({ children }) => (
             background: `#ffffff`,
             borderRadius: `4px`,
             border: `1px solid #d1d5da`,
-            minHeight:`768px`
+            minHeight: `768px`,
           }}
         >
           <main>{children}</main>

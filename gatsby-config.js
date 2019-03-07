@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/focusface`,
   siteMetadata: {
     title: `Mr.chenxi 的小站`,
     description: `Tell me what you want to hear,Something that will light those ears.`,
@@ -25,6 +26,19 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: "pages",
+      },
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [], // just in case those previously mentioned remark plugins sound cool :)
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
